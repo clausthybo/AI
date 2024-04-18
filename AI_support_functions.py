@@ -1,4 +1,6 @@
-
+def test(i):
+  return i+1
+  
 def train_step(model: torch.nn.Module,
                dataloader: torch.utils.data.DataLoader,
                loss_fn: torch.nn.Module,
