@@ -1,4 +1,4 @@
-def ftest():
+def fftest():
   return 2222
   
 def train_step(model: torch.nn.Module,
