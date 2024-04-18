@@ -89,7 +89,7 @@ def train(model: torch.nn.Module,
 
 def test(model: torch.nn.Module,
           test_dataloader:torch.utils.data.DataLoader,
-          loss_fn: torch.nn.Module=nn.CrossEntropyLoss(),
+          loss_fn: torch.nn.Module,
           device: torch.device):
   results = {"test_loss": [],
              "test_acc": []}
