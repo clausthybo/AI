@@ -148,10 +148,10 @@ def plot_loss_curves(results: Dict[str, List[float]]):
 
 
 def pred_and_plot_image(model:torch.nn.Module,
+                        device: torch.device,
                         image_path:str,
                         class_names:List[str]=None,
-                        transform=None,
-                        device: torch.device):
+                        transform=None):
   target_image= torchvision.io.read_image(str(image_path)).type(torch.float32)
   target_image=target_image/255
   if transform:
