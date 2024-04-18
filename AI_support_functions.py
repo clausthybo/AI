@@ -62,7 +62,7 @@ def train(model: torch.nn.Module,
           train_dataloader:torch.utils.data.DataLoader,
           test_dataloader:torch.utils.data.DataLoader,
           optimizer: torch.optim.Optimizer,
-          loss_fn: torch.nn.Module=nn.CrossEntropyLoss(),
+          loss_fn: torch.nn.Module,
           epochs:int,
           device: torch.device):
   results = {"train_loss": [],
