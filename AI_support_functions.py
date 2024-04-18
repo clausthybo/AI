@@ -21,7 +21,7 @@ def train_step(model: torch.nn.Module,
                dataloader: torch.utils.data.DataLoader,
                loss_fn: torch.nn.Module,
                optimizer:torch.optim.Optimizer,
-               device:device):
+               device: torch.device):
   model.train()
   train_loss, train_acc= 0, 0
 
@@ -43,7 +43,7 @@ def train_step(model: torch.nn.Module,
 def test_step(model: torch.nn.Module,
                dataloader: torch.utils.data.DataLoader,
                loss_fn: torch.nn.Module,
-               device=device):
+               device: torch.device):
   model.eval()
   test_loss, test_acc = 0,0
   with torch.inference_mode():
