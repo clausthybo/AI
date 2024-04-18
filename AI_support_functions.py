@@ -1,4 +1,4 @@
-def test(i):
+def ftest(i):
   return i+1
   
 def train_step(model: torch.nn.Module,
