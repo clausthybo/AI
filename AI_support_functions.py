@@ -15,7 +15,7 @@ from torchvision import transforms
 from typing import Tuple, Dict, List
 
 def fftest():
-  return 2222
+  return 7
   
 def train_step(model: torch.nn.Module,
                dataloader: torch.utils.data.DataLoader,
