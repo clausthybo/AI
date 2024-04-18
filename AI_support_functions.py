@@ -64,7 +64,7 @@ def train(model: torch.nn.Module,
           optimizer: torch.optim.Optimizer,
           loss_fn: torch.nn.Module=nn.CrossEntropyLoss(),
           epochs:int =5,
-          device=device):
+          device: torch.device):
   results = {"train_loss": [],
              "train_acc": [],
              "test_loss": [],
@@ -90,7 +90,7 @@ def train(model: torch.nn.Module,
 def test(model: torch.nn.Module,
           test_dataloader:torch.utils.data.DataLoader,
           loss_fn: torch.nn.Module=nn.CrossEntropyLoss(),
-          device=device):
+          device: torch.device):
   results = {"test_loss": [],
              "test_acc": []}
 
@@ -150,7 +150,7 @@ def pred_and_plot_image(model:torch.nn.Module,
                         image_path:str,
                         class_names:List[str]=None,
                         transform=None,
-                        device=device):
+                        device: torch.device):
   target_image= torchvision.io.read_image(str(image_path)).type(torch.float32)
   target_image=target_image/255
   if transform:
