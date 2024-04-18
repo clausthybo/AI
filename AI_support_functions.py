@@ -87,6 +87,7 @@ def train(model: torch.nn.Module,
     results["test_acc"].append(test_acc)
   return results
 
+
 def test(model: torch.nn.Module,
           test_dataloader:torch.utils.data.DataLoader,
           loss_fn: torch.nn.Module,
